@@ -16,6 +16,7 @@
 package com.example.android.supportv7.widget;
 
 import android.support.v4.util.ArrayMap;
+import android.support.v7.widget.SimpleItemAnimator;
 import android.widget.CompoundButton;
 import com.example.android.supportv7.R;
 import android.app.Activity;
@@ -96,7 +97,7 @@ public class AnimatedRecyclerView extends Activity {
         enableChangeAnimations.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mCachedAnimator.setSupportsChangeAnimations(isChecked);
+                ((SimpleItemAnimator)mCachedAnimator).setSupportsChangeAnimations(isChecked);
             }
         });
     }

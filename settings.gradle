@@ -1,0 +1,17 @@
+include ':Support4Demos'
+project(':Support4Demos').projectDir = file('samples/Support4Demos')
+
+include ':Support7Demos'
+project(':Support7Demos').projectDir = file('samples/Support7Demos')
+
+include ':SupportAppNavigation'
+project(':SupportAppNavigation').projectDir = file('samples/SupportAppNavigation')
+
+include ':SupportDesignDemo'
+project(':SupportDesignDemo').projectDir = file('samples/SupportDesignDemos')
+
+include ':SupportPercentDemos'
+project(':SupportPercentDemos').projectDir = file('samples/SupportPercentDemos')
+
+include ':ApiDemos'
+project(':ApiDemos').projectDir = file('samples/ApiDemos')

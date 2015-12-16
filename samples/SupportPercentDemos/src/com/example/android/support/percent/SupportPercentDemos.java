@@ -16,17 +16,17 @@
 
 package com.example.android.support.percent;
 
-import android.app.Activity;
-import android.app.Fragment;
 import android.os.Bundle;
-import android.app.FragmentManager;
-import android.support.v13.app.FragmentStatePagerAdapter;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class SupportPercentDemos extends Activity {
+public class SupportPercentDemos extends FragmentActivity {
     private static final String LAYOUT_RESOURCE_ID = "layout_resource_id";
 
     private ViewPager mPager;
@@ -36,7 +36,7 @@ public class SupportPercentDemos extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.support_percent_demos);
         mPager = (ViewPager) findViewById(R.id.pager);
-        mPager.setAdapter(new Adapter(getFragmentManager()));
+        mPager.setAdapter(new Adapter(getSupportFragmentManager()));
     }
 
     public static class Adapter extends FragmentStatePagerAdapter {

@@ -27,6 +27,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SimpleItemAnimator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,7 +70,7 @@ abstract public class BaseLayoutManagerActivity<T extends RecyclerView.LayoutMan
         mLayoutManager = createLayoutManager();
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(createAdapter());
-        mRecyclerView.getItemAnimator().setSupportsChangeAnimations(true);
+        ((SimpleItemAnimator)mRecyclerView.getItemAnimator()).setSupportsChangeAnimations(true);
         onRecyclerViewInit(mRecyclerView);
     }
 
